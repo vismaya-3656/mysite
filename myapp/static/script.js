@@ -1,3 +1,3 @@
 function showMessage() {
-    alert("Button clicked successfully!");
+    alert("Thank you for contacting me!");
 }

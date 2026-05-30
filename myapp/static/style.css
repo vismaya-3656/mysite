@@ -1,24 +1,42 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 50px;
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
 }
 
 h1 {
-    color: #333;
+    color: darkblue;
+    margin-top: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: blue;
+.nav {
+    margin: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    margin: 10px;
     color: white;
-    border: none;
+    background-color: darkblue;
+    padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: darkblue;
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.image-box img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
 }
