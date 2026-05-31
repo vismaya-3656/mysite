@@ -1,27 +1,14 @@
 from django.shortcuts import render
 
-def employee_directory(request):
-    employees = [
-        {
-            'name': 'Manu',
-            'job_title': 'Software Engineer',
-            'salary': 60000,
-            'is_full_time': True
-        },
-        {
-            'name': 'Amal',
-            'job_title': 'Designer',
-            'salary': 35000,
-            'is_full_time': False
-        },
-        {
-            'name': 'Arjun',
-            'job_title': 'Manager',
-            'salary': 80000,
-            'is_full_time': True
-        }
-    ]
+def user_form(request):
+    return render(request, 'user_form.html')
 
-    return render(request, 'employee_directory.html', {
-        'employees': employees
-    })
+def result(request):
+    username = request.GET.get('username')
+
+    context = {
+        'username': username,
+        'form_data': request.GET
+    }
+
+    return render(request, 'result.html', context)
