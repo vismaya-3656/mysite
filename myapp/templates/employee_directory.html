@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Directory</title>
+    <style>
+        .full-time {
+            color: green;
+            font-weight: bold;
+        }
+
+        .part-time {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Employee Directory</h1>
+
+<ul>
+    {% for employee in employees %}
+        <li>
+            <strong>Name:</strong> {{ employee.name }} <br>
+            <strong>Job Title:</strong> {{ employee.job_title }} <br>
+            <strong>Salary:</strong> ₹{{ employee.salary }} <br>
+
+            {% if employee.is_full_time %}
+                <span class="full-time">Full-Time</span>
+            {% else %}
+                <span class="part-time">Part-Time</span>
+            {% endif %}
+        </li>
+        <br>
+    {% empty %}
+        <li>No employees available.</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
