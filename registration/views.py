@@ -1,0 +1,17 @@
+from django.shortcuts import render
+from .forms import RegistrationForm
+
+def register(request):
+    if request.method == "POST":
+        form = RegistrationForm(request.POST)
+
+        if form.is_valid():
+            return render(request, "registration_success.html", {
+                "name": form.cleaned_data["full_name"]
+            })
+    else:
+        form = RegistrationForm()
+
+    return render(request, "registration_form.html", {
+        "form": form
+    })
