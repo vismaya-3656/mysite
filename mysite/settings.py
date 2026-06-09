@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp','loginform','movies',
-    'favoritecolor','registration'
+    'favoritecolor','registration',
+    'contactapp'
 ]
 
 MIDDLEWARE = [
