@@ -66,3 +66,17 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('website.urls')),
 ]
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('companysite.urls')),
+]
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('school.urls')),
+]
